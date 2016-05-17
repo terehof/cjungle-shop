@@ -116,6 +116,10 @@
 .shop-items__item:hover {
   border: 1px solid rgba(0,0,0,0.4);
 }
+.shop-items__item:hover .download_btn {
+  background: #333;
+  color: #fff;
+}
 .shop-items__item span:not(:last-of-type) {
   display: block;
 }

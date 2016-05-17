@@ -769,6 +769,28 @@ p.contact.email a:hover {
 #map-canvas {
     height: 580px;
 }
+#header-order-form {
+    max-width: 400px;
+}
+.order-form__row__col_text {
+    position: relative;
+    padding: 35px 60px 70px 70px !important;
+}
+.toggle-form-btn {
+    position: absolute;
+    bottom: 20px;
+    margin: 0 !important;
+}
+.order-form__row__col_image {
+    position: relative;
+    padding-bottom: 50px !important;
+}
+.send-form-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);-moz-transform: translate(-50%, 0%);-ms-transform: translate(-50%, 0%);-o-transform: translate(-50%, 0%);transform: translate(-50%, 0%);
+}
 
 @media (max-width: 960px) {
     #scrollUp {

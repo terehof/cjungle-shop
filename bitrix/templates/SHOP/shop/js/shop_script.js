@@ -8,13 +8,28 @@ $(document).ready(function () {
     prevArrow: '#shop-arrow-left',
   });
 
-  $('#order-btn').magnificPopup({
+  $('.shop-items__item').on('click', function () {
+    var $this = $(this);
+    $this.find('.order-btn').click();
+  });
+  $('.order-btn').magnificPopup({
+    removalDelay: 500,
+    mainClass: 'mfp-fade',
+    callbacks: {
+      open: function() {
+        console.log('popup opened!!!');
+        console.log('toggleBtnOffset',$('.toggle-form-btn').offset().top);
+        console.log('sendFormBtnOffset', $('.send-form-btn').offset().top);
+      }
+    }
+  });
+  $('.header-order-btn').magnificPopup({
     removalDelay: 500,
     mainClass: 'mfp-fade'
   });
 
-  $('#order-form-btn').click(function(event) {
-    $( '.order-form__row__col' ).toggleClass( "form" );
+  $('.order-form-btn').click(function(event) {
+    $(this).closest('.order-form__row').find('.order-form__row__col').toggleClass( "form" );
   });
 
 
