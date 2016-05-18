@@ -38,10 +38,27 @@ $(document).ready(function () {
             logoImageHeight = $('.logo').height() * 0.6;
         scrollTop = scrollTop * k;
         $('.logo').height(logoHeight - scrollTop);
-        console.log(scrollTop);
-        $('header').css('padding-top', 30 -scrollTop/2);
-        if ((25 - scrollTop) > 7) {
-            $('.header-num').css('margin-top', 25 - scrollTop/2);
+        //console.log('scrollTop',scrollTop);
+
+        if (scrollTop > 80) {
+            var opacity = (150 - scrollTop)*0.01;
+            $('.header-num').css('opacity', opacity);
+        } else {
+            $('.header-num').css('opacity', 1);
+        }
+
+        if (scrollTop > 150) {
+            var marTop = 5 - scrollTop*0.15;
+            console.log('marTop',marTop);
+            if (marTop >= (-25)) {
+                $('.header-num').css('margin-top', marTop);
+            }
+        } else {
+            $('.header-num').css('margin-top', '5px');
+        }
+
+        if ((5 - scrollTop) > 7) {
+            $('.header-num').css('margin-top', 5 - scrollTop/2);
         }
         if ($('.logo').height() <= 0 && $(window).width() > 640) {
             $header.css({

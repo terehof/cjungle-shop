@@ -43,11 +43,11 @@ $this->setFrameMode(true);
 	                <div class="order-form__row__col order-form__row__col_image">
 	                    <img src="<?=$arItem["DETAIL_PICTURE"]["SRC"]?>" alt="">
 	                    <div class="form">
-	                        <form id="order-form-send">
-	                            <input style="height:28px" type="text" maxlength="30" placeholder="Имя*" pattern="[A-Za-zА-Яа-яЁё]{2,30}" required>
-	                            <input style="height:28px" type="text" maxlength="12" placeholder="Телефон* ( +70000000000 )" pattern="^\+[0-9]{11}" required>
-	                            <input style="height:28px" type="text" maxlength="30" placeholder="E-mail*" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-	                            <textarea maxlength="500" maxlength="10" placeholder="Название моделаи и количество*"></textarea>
+	                        <form method="post" action="" class="order-form-send" >
+	                            <input name="name" style="height:28px" type="text" maxlength="30" placeholder="Имя*" pattern="[A-Za-zА-Яа-яЁё]{2,30}" required>
+	                            <input name="phone" style="height:28px" type="text" maxlength="12" placeholder="Телефон*"  required>
+	                            <input name="email" style="height:28px" type="text" maxlength="30" placeholder="E-mail*" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+	                            <textarea name="message" maxlength="500" maxlength="10" placeholder="Название модели и количество*"></textarea>
 	                            <button class="download_btn send-form-btn" type="submit">Отправить</button>
 	                        </form>
 	                    </div>
@@ -77,8 +77,8 @@ $this->setFrameMode(true);
 		                    }?>
 	                    </p>
 	                    <p class="order-form__row__col_text_p">
-	                    Оформите заказ у нашего менеджера по телефону: <b><a href="tel:+79025253440">+7(902) 525-34-40</a></b> <br>или по почте: <b><a href="mailto:order@cjungleshop.com">order@cjungleshop.com</a></b>
-	                    </p>
+						Оформите заказ у нашего менеджера по телефону: <b><a href="tel:+79089933619">+7(908) 993-36-19</a></b> <br>или по почте: <b><a href="mailto:mail@cjungle.com">mail@cjungle.com</a></b>
+	                   </p>
 	                    <button class="download_btn order-form-btn toggle-form-btn">Форма заказа</button>
 	                </div>
 	            </div>

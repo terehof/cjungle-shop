@@ -3,13 +3,13 @@
   color: #000;
   display: block;
   font-size: 18px;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 .download_btn {
   outline: none
 }
 #header .download_btn {
-  margin: 15px;
+  margin: 15px 15px 10px;
   font-size: 17px;
   border-width: 2px;
   padding: 5px 35px;
@@ -20,7 +20,7 @@
 }
 
 .shop__slider__wrap:hover .shop__arrow{
-  opacity: 0.5;
+  /*opacity: 0.5;*/
 }
 .shop__arrow {
   width: 54px;
@@ -33,9 +33,18 @@
   cursor: pointer;
   transition: all 0.25s linear;
 }
-.shop__arrow:hover{
+.shop__arrow:hover {
   /*background: rgba(255,255,255,0.2);*/
-  background-color: rgba(220, 220, 220, 1);
+  /*background-color: rgba(220, 220, 220, 1);*/
+}
+.shop__arrow img.hover {
+  display: none;
+}
+.shop__arrow:hover img {
+  display: none;
+}
+.shop__arrow:hover img.hover {
+  display: block;
 }
 .shop__arrow img {
   max-width: 100%;
